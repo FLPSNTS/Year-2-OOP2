@@ -1,23 +1,30 @@
 public class Rectangle extends Shape {
 
-    private int height;
-    private int width;
+    private float height;
+    private float width;
 
     //declaring the mandatory abstract GetArea from Shape
     @Override
-    public int getArea() {
+    public double getArea() {
         return height * width;
     }
 
-    public int getHeight() {
+    public float getHeight() {
         return height;
     }
-
     public void setHeight(int height) {
         this.height = height;
     }
 
-    public Rectangle(int height, int width) {
+    public float getWidth(){
+        return width;
+    }
+    public void setWidth(int width) {
+        this.width = width;
+    }
+
+
+    public Rectangle(float height, float width) {
         super(4);
         this.height = height;
         this.width = width;
