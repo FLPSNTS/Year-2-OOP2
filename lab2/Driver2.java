@@ -4,18 +4,23 @@ public class Driver2 {
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
+        WordProcessor wp = new WordProcessor(); // could not call counter datatype because gettext is exclusive to WordProcessor
+
 
         System.out.println("Choose sentence");
         String sentence = input.nextLine();
 
-        Counter counter = new WordProcessor();
-        counter.countWords(sentence);
-        counter.countLetters(sentence);
-        counter.getLength(sentence);
+        if (sentence == null || sentence.isEmpty()) { //user input never returns null - it has to be forced by isEmpty method
+            sentence = wp.getText();
+            System.out.println(sentence);
+        }
 
-        System.out.println("length: " + counter.getLength(sentence) +
-                "\nletters: " + counter.countLetters(sentence) +
-                "\nwords: " + counter.countWords(sentence));
+
+        else{
+            System.out.println("length: " + wp.getLength(sentence) +
+                    "\nletters: " + wp.countLetters(sentence) +
+                    "\nwords: " + wp.countWords(sentence));
+        }
 
 
 
