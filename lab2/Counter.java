@@ -1,10 +1,7 @@
 interface Counter {
 
     //count amount of words
-    default int countWords(String sentence) {
-        return 0;
-    }
-
+    int countWords(String sentence);
     //count amount of letters
     int countLetters (String sentence);
     //get length
