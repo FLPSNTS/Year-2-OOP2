@@ -1,12 +1,12 @@
-public abstract class Science extends Subject {
+public abstract class Social extends Subject {
 
-    public Science(String name, String description) {
+    public Social(String name, String description) {
         super(name, description);
     }
 
     //All Science-based subjects have a credit amount of 100
     public int getCredits() {
-        return 100;
+        return 50;
     }
 
 }

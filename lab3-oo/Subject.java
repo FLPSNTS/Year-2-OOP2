@@ -1,10 +1,10 @@
-public class Subject implements Delivery {
+//Subject is abstract class
+public abstract class Subject implements Delivery {
 
-    private String name;
-    private String description;
+    private final String name;
+    private final String description;
     private String tutor;
     private String room;
-    private int credits;
 
     @Override
     public String getTutor() {
@@ -26,9 +26,7 @@ public class Subject implements Delivery {
         this.room = room;
     }
 
-    public int getCredits() {
-        return this.credits;
-    }
+    abstract int getCredits(); //The getCredit() method is declared as abstract within the Subject class.
 
     public String getName() {
         return this.name;
@@ -38,6 +36,9 @@ public class Subject implements Delivery {
         return this.description;
     }
 
+
+    //The ‘name’ and ‘description’ attribute values should be setup by the constructors (since no
+    //set methods exist)
     public Subject(String name, String description){
         this.name = name;
         this.description = description;
