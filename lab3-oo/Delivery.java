@@ -1,7 +1,8 @@
+
 public interface Delivery {
 
-    String getTutor();
+    String getTutor() throws NoTutorException;
     void setTutor(String tutor);
-    String getRoom();
+    String getRoom() throws NoRoomException;
     void setRoom (String room);
 }

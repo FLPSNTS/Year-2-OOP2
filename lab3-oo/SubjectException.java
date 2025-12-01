@@ -1,0 +1,6 @@
+public abstract class SubjectException extends Exception {
+
+    public SubjectException(String message) {
+        super("issue with subject: " + message);
+    }
+}
