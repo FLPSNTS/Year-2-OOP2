@@ -2,22 +2,37 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 class TriangleTest {
 
+    private Triangle triangle;
+
     @BeforeEach
-    void setUp() {}
+    void setUp() {
+    }
 
     @AfterEach
     void tearDown() {}
 
     @Test
-    void isIsosceles() {}
+    void isIsosceles() {
+        Triangle t = new Triangle(1,2,2);
+        assertTrue(t.isIsosceles());
+
+    }
 
     @Test
-    void isEquilateral() {}
+    void isEquilateral() {
+        Triangle t = new Triangle(1,1,1);
+        assertTrue(t.isEquilateral());
+    }
 
     @Test
-    void isScalene() {}
+    void isScalene() {
+        Triangle t = new Triangle(1,2,3);
+        assertTrue(t.isScalene());
+    }
 
     @Test
     void setSides() {}
