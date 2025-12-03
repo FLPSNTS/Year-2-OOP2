@@ -9,9 +9,8 @@ public class Driver4 {
         m1.setTutor("D. Trump");
         subjects[0] = m1;
 
-        Art art1 = new Art();
-        art1.setRoom("101");
-        art1.setTutor("Bruce Wayne");
+        //art has the option to take room and tutor
+        Art art1 = new Art("101","Bruce Wayne");
         subjects[1] = art1;
 
         Languages lang1 = new Languages();

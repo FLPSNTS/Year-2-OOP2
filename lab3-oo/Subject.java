@@ -43,4 +43,12 @@ public abstract class Subject implements Delivery {
         this.name = name;
         this.description = description;
     }
+
+        //overloaded Subject with tutor and room
+    public Subject(String name, String description, String tutor, String room) {
+        this.name = name;
+        this.description = description;
+        this.tutor = tutor;
+        this.room = room;
+    }
 }
