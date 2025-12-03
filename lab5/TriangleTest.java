@@ -5,6 +5,7 @@ import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class TriangleTest {
@@ -115,6 +116,41 @@ class TriangleTest {
         Triangle t = new Triangle(length);
 
         assertTrue(t.isEquilateral());
+    }
+
+    @Test
+    void testSetSidesIsosceles () {
+        Triangle t = new Triangle();
+        t.setSides(5, 2);
+        Assertions.assertTrue(t.isIsosceles());
+        Assertions.assertFalse(t.isScalene());
+    }
+
+    @Test
+    void testSetSides3_NegativeValues() {
+        Triangle t = new Triangle();
+        t.setSides(-3, -4, -5);
+
+        Assertions.assertEquals(12, t.getPerimeter()); // 3 + 4 + 5
+        Assertions.assertTrue(t.isScalene());
+    }
+
+    @Test
+    void testConstructor3_NegativeValues() {
+        Triangle t = new Triangle(-3, -4, -5);
+
+        Assertions.assertEquals(12, t.getPerimeter());
+        Assertions.assertTrue(t.isScalene());
+    }
+
+    //copied from solutions
+    @Test
+    void breakGetPerimeter() {
+
+        Triangle tri = new Triangle(2000000000, 2000000000, 2000000000);
+
+        Assertions.assertEquals(6000000000L, tri.getPerimeter()); 	// FAILS: overflows max size of return type 'int'
+        // Could fix by returning long value from getPerimeter()
     }
 
 }

@@ -77,7 +77,7 @@ public class Triangle {
     }
 
     /**
-     * Sets the triangle to be scalene with two sides set to the same value.
+     * Sets the triangle to be scalene ----------- > this should say isosceles <----------- with two sides set to the same value.
      *
      * @param length the length of side A, B
      * @param other the length of side C
