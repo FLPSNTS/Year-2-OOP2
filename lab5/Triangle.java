@@ -153,6 +153,10 @@ public class Triangle {
      * Constructor
      *
      * Creates an equilateral triangle with all sides set to 1
+     *
+     *
+     *
+     *
      */
     public Triangle() {
 
