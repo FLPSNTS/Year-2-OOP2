@@ -1,7 +1,9 @@
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.RepetitionInfo;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.RepeatedTest;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -99,4 +101,21 @@ class TriangleTest {
         Triangle t = new Triangle(1);
         Assertions.assertEquals(3, t.getPerimeter());
     }
+
+    @RepeatedTest(5)
+    void repeatedSetSidesTest(org.junit.jupiter.api.RepetitionInfo repetitionInfo) {
+        Triangle t = new Triangle();
+        t.setSides(repetitionInfo.getCurrentRepetition());
+        assertTrue(t.isEquilateral());
+    }
+
+    @ParameterizedTest
+    @ValueSource(ints = {1, 2, 5, 10, 99})
+    void testEquilateralParameterized(int length) {
+        Triangle t = new Triangle(length);
+
+        assertTrue(t.isEquilateral());
+    }
+
 }
+
