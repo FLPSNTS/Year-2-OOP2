@@ -4,13 +4,13 @@ public class Driver4 {
 
         Subject[] subjects = new Subject[6];
 
-        Maths m1 = new Maths();
+        Science m1 = new Maths();
         m1.setRoom("The White House");
         m1.setTutor("D. Trump");
         subjects[0] = m1;
 
         //art has the option to take room and tutor
-        Art art1 = new Art("101","Bruce Wayne");
+        Subject art1 = new Art("101","Bruce Wayne");
         subjects[1] = art1;
 
         Languages lang1 = new Languages();
