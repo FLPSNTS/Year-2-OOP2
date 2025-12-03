@@ -106,7 +106,7 @@ public class Triangle {
      */
     public int getPerimeter() {
 
-        return sideA + sideB + sideB;
+        return sideA + sideB + sideC;
     }
 
     /**
@@ -116,7 +116,7 @@ public class Triangle {
      */
     public int getAverageLength() {
 
-        return sideA + sideB + sideC / 3;
+        return (sideA + sideB + sideC) / 3;
     }
 
     /////////////////////////////////////////////////////

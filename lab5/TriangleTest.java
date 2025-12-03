@@ -3,7 +3,6 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class TriangleTest {
@@ -11,6 +10,8 @@ class TriangleTest {
 
     @BeforeEach
     void setUp() {
+
+        Triangle triangle = new Triangle();
 
     }
 
@@ -39,29 +40,33 @@ class TriangleTest {
     @Test
     void testSetSides3() {
         Triangle t = new Triangle();
-        t.setSides(3, 4, 5);
-        //how to assert?
+        t.setSides(3, 5, 5);
+        Assertions.assertTrue(t.isIsosceles());
     }
 
     @Test
     void testSetSides1() {
         Triangle t = new Triangle();
         t.setSides(5);
-            //how to assert?
+        Assertions.assertEquals(15, t.getPerimeter());
+
     }
 
     @Test
     void testSetSides2() {
         Triangle t = new Triangle();
         t.setSides(5,2);
-        //how to assert?
+        Assertions.assertEquals(12, t.getPerimeter());
     }
 
     @Test
     void testCopy(){
         Triangle t = new Triangle();
-        t.copy();
-        //how to assert?
+        Triangle copy = t.copy();
+        Assertions.assertEquals(t.getPerimeter(), copy.getPerimeter());
+        Assertions.assertEquals(t.getAverageLength(), copy.getAverageLength());
+        Assertions.assertNotSame(t, copy); //not same object
+
     }
 
 
@@ -80,6 +85,18 @@ class TriangleTest {
     @Test
     void testTriangle() {
         Triangle t = new Triangle();
-        assertTrue(triangle.isEquilateral());
+        Assertions.assertEquals(3, t.getPerimeter());
+    }
+
+    @Test
+    void testTriangle2() {
+        Triangle t = new Triangle(3,5,2);
+        Assertions.assertEquals(10, t.getPerimeter());
+    }
+
+    @Test
+    void testTriangle3() {
+        Triangle t = new Triangle(1);
+        Assertions.assertEquals(3, t.getPerimeter());
     }
 }
