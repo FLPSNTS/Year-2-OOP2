@@ -9,13 +9,8 @@
       <sourceFolder url="file://$MODULE_DIR$/lab3-oo" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/lab4" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/lab5" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/SSD_2023_Mock_Assign/src/test" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/SSD_2023_Mock_Assign/src/vehicles" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/mocktest/test" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/mocktest/vehicles" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/mock-test/mock" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lab7" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/mock-test/src" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/mock-test/test" isTestSource="true" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
