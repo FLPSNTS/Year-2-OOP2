@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Driver7 {
 
     public static void main(String[] args) {
@@ -13,6 +15,17 @@ public class Driver7 {
         manager.printNames(); // should now have longer names removed
 
 
+
+        NumberSorter sorter = new NumberSorter();
+        int[] a = {1,9,2,3,10,8,12,1, 99, 2, 43, 68, 109, 0};
+        int[] b = {1,2,3,4};
+        int[] c = {4,3,2,1};
+        sorter.sort(a);
+        sorter.sort(b);
+        sorter.sort(c);
+        System.out.println(Arrays.toString(a));
+        System.out.println(Arrays.toString(b));
+        System.out.println(Arrays.toString(c));
 
     }
 }
