@@ -77,9 +77,13 @@ public class VehicleSet implements VehicleCollection {
 
 	    // iterate the set, finding the vehicle with the largest range
 	    for (Vehicle v : vehicles) {
-	        if (largest == null || v.getMaxRange() > largest.getMaxRange()) {
-	            largest = v;
-	        }
+            if (largest == null) {
+                largest = v;
+            }
+            if (v.getMaxRange() > largest.getMaxRange()) {
+                largest = v;
+            }
+
 	    }
 
 	    return largest;
@@ -91,7 +95,19 @@ public class VehicleSet implements VehicleCollection {
 		int count = 0;
 
 		// TODO PART3 : Check if given model is null
+
+        if (model == null){
+            return count;
+        }
+
+
 		// TODO PART3 : iterate the set, counting the number of vehicles with the given model
+
+        for (Vehicle v : vehicles){
+            if (v.getModel().equalsIgnoreCase(model)){
+                count++;
+            }
+        }
 		// hint: call getModel() for each vehicle and compare with given model using a method
 		
 		return count;
@@ -101,9 +117,22 @@ public class VehicleSet implements VehicleCollection {
 	public boolean containsVehicleWithReg(String regNo) {
 		
 		// TODO PART3 : Check if given regNo is null
-		// TODO PART3 : iterate the set, check if any vehicles have the given regNo
-		return false;
-	}
+        // TODO PART3 : iterate the set, check if any vehicles have the given regNo
+
+        if (regNo == null){
+            return false;
+        }
+
+        for (Vehicle v: vehicles){
+            if (v.getRegistration().equals(regNo)){
+                return true;
+                }
+            }
+
+
+        return false;
+
+    }
 	
 	///////////////////////////////////////////////////////////////////////
 
