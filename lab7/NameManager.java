@@ -1,7 +1,9 @@
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class NameManager {
+
     List<String> names = new ArrayList<String>();
 
 
@@ -16,8 +18,20 @@ public class NameManager {
     }
 
     void removeLongNames(){
+        Iterator<String> iterator = names.iterator();
+        while (iterator.hasNext()){
+            if (iterator.next().length() > 15){
+                iterator.remove();
+            }
+        }
 
     }
+
+    //other solution
+    //void removeLongNames() {
+    //    names.removeIf(name -> name.length() > 15);
+    //}
+
 
 
 }

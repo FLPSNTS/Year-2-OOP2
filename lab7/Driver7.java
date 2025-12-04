@@ -12,5 +12,7 @@ public class Driver7 {
         manager.removeLongNames();
         manager.printNames(); // should now have longer names removed
 
+
+
     }
 }
