@@ -17,15 +17,9 @@ public class Driver7 {
 
 
         NumberSorter sorter = new NumberSorter();
-        int[] a = {1,9,2,3,10,8,12,1, 99, 2, 43, 68, 109, 0};
-        int[] b = {1,2,3,4};
-        int[] c = {4,3,2,1};
-        sorter.sort(a);
-        sorter.sort(b);
-        sorter.sort(c);
-        System.out.println(Arrays.toString(a));
-        System.out.println(Arrays.toString(b));
-        System.out.println(Arrays.toString(c));
+        sorter.sort(new int [] {1,9,2,3,10,8,12,1, 99, 2, 43, 68, 109, 0},true);
+        sorter.sort(new int [] {1,2,3,4},false);
+        sorter.sort(new int [] {4,3,2,1},true);
 
     }
 }
