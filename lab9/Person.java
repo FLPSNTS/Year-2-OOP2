@@ -1,10 +1,10 @@
 public class Person {
 
-    private float height ;
+    private int height ;
     private int age ;
     private boolean isMale;
 
-    public void setHeight (float height) {
+    public void setHeight (int height) {
         this.height = height;
     }
     public void setAge (int age) {
@@ -27,7 +27,7 @@ public class Person {
         return age;
     }
 
-    public Person(float height, int age, boolean isMale) {
+    public Person(int height, int age, boolean isMale) {
         this.height = height;
         this.age = age;
         this.isMale = isMale;
@@ -40,7 +40,13 @@ public class Person {
 
     @Override
     public String toString(){
-        return ("age: " + getAge() + "height: " + getHeight() + "Male:" + getIsMale());
+        String gender = "";
+        
+        if (getIsMale() == false){
+            gender = "Female";
+            
+        }
+        return ("age: " + getAge() + "height: " + getHeight() + "Male:" + gender);
 
     }
 
