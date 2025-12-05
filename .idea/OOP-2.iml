@@ -12,6 +12,7 @@
       <sourceFolder url="file://$MODULE_DIR$/lab7" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/mock-test/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/lab8" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lab9" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
