@@ -16,6 +16,10 @@ public class Driver8 {
 
         storer.displayEmails();
 
+        WordCounter wc = new WordCounter();
+        wc.addSentence("This sentence has the word has in it twice");
+                wc.outputResults();
+
 
 
 
@@ -41,6 +45,10 @@ public class Driver8 {
         //        storer.displayEmails();
         //    }
         //}
+
+
+
+
 
 
 
