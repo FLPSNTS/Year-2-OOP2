@@ -40,6 +40,8 @@ public class Driver9 {
         census.removePerson(p3);
         System.out.println(census);
 
+        census.sortOnAge();
+
     }
 
 

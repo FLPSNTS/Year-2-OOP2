@@ -19,7 +19,7 @@ public class Person {
         return isMale;
     }
 
-    public float getHeight() {
+    public int getHeight() {
         return height;
     }
 
