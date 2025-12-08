@@ -86,12 +86,37 @@ public class Census {
         });
     }
 
+
+
     @Override
-    public String toString() {
-        return "Total people: " + countPeople() + "\n" +
-                "Total males: " + countMales() + "\n" +
-                "Total females: " + countFemales() + "\n";
+    public String toString(){
+        StringBuilder sb = new StringBuilder();
+
+        sb.append("total people: ").append(countPeople()).append("\n");
+        sb.append("Total males: ").append(countMales()).append("\n");
+        sb.append("Total females: ").append(countFemales()).append("\n");
+
+        for (Person p : people){
+            sb.append(p.toString()).append("\n");
+        }
+
+        return sb.toString();
     }
+
+//    @Override
+//    public String toString() {
+//        String result = "Total people: " + countPeople() + "\n" +
+//                "Total males: " + countMales() + "\n" +
+//                "Total females: " + countFemales() + "\n\n";
+//
+//        for (Person p : people) {
+//            result += p.toString() + "\n";  // less efficient, but valid
+//        }
+//
+//        return result;
+//    }
+    //no stringbuilder works but not correct way
+
 
 
 }

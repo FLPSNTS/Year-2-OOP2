@@ -39,15 +39,9 @@ public class Person {
     }
 
     @Override
-    public String toString(){
-        String gender = "";
-        
-        if (getIsMale() == false){
-            gender = "Female";
-            
-        }
-        return ("age: " + getAge() + "height: " + getHeight() + "Male:" + gender);
-
+    public String toString() {
+        String gender = isMale ? "Male" : "Female";
+        return "Age: " + age + ", Height: " + height + ", Gender: " + gender;
     }
 
 }

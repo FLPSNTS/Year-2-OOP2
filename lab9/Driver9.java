@@ -41,6 +41,14 @@ public class Driver9 {
         System.out.println(census);
 
         census.sortOnAge();
+        System.out.println(census);
+
+        census.sortOnGender();
+        System.out.println(census);
+
+        census.sortOnHeight();
+        System.out.println(census);
+
 
     }
 
