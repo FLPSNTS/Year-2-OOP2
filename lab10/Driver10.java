@@ -50,10 +50,18 @@ public class Driver10 {
                 .map(n -> n * n * n)
                 .forEach(System.out::println);
 
-        Stream.generate(Math::random) // infinite random doubles
-                .map(n -> (int)(n * 5 + 1)) // intergers 1-5
-                .limit(10)
-                .forEach(System.out::println);
+
+
+            List<Integer> randomList =
+            Stream.generate(Math::random) // infinite random doubles
+                    .map(n -> (int)(n * 5 + 1)) // intergers 1-5
+                    .limit(10) // this is obsolete now because there will only be 5 values? --- HAS TO BE ABOVE DISTINCT OTHERWISE CRASHES
+                    .distinct() // will remove duplicates
+                    .toList();
+
+            for (int n : randomList){
+                System.out.println("Value: " + n);
+            }
 
 
 //
